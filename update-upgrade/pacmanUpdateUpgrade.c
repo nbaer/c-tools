@@ -1,7 +1,7 @@
 /*
  *	This program runs "pacman -Syu" with or without sudo, based on user input.
  *
- *	Written by: Nick Baer on 6/20/2014
+ *	Written by: Nick on 6/20/2014
  */
 
 
