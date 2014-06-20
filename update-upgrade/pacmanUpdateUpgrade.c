@@ -21,12 +21,12 @@ int main(void)
 	char sudo;
 
 	// Confirm update/upgrade
-	printf("[nickupup] Update repos and upgrade the system using pacman? [y/N] [default: N] ");
+	printf("[pacupup] Update repos and upgrade the system using pacman? [y/N] [default: N] ");
 	verify = verifyAction(getchar());
 
 	if(verify > 0) {
 		// Prompt for usage of sudo
-		printf("[nickupup] Use sudo? [y/N] [default: y] ");
+		printf("[pacupup] Use sudo? [y/N] [default: y] ");
 		sudo = sudoOption(getchar(), command);
 
 		if(sudo > 0) {
@@ -49,7 +49,7 @@ int verifyAction(char input)
 		case 'n':
 		case 'N':
 		case '\n':
-			printf("[nickupup] Exiting.\n");
+			printf("[pacupup] Exiting.\n");
 			return 0;
 		case 'y':
 		case 'Y':
@@ -57,7 +57,7 @@ int verifyAction(char input)
 			while((ch = getchar()) != '\n' && ch != EOF);
 			return 1;
 		default:
-			printf("[nickupup] Invalid input. Exiting.\n");
+			printf("[pacupup] Invalid input. Exiting.\n");
 			return 0;
 	}
 }
@@ -78,7 +78,7 @@ int sudoOption(char input, char *command)
 			return 1;
 		default:
 			// The user started their input string with something other than y, Y, n, N, or \n; ABORT
-			printf("[nickupup] Invalid input. Exiting.\n");
+			printf("[pacupup] Invalid input. Exiting.\n");
 			return 0;
 	}
 }
