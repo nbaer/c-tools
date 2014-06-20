@@ -2,11 +2,10 @@ These programs very simply update and upgrade Linux systems via some user intera
 
 I plan on writing at least 3 of these for:
 
-apt
-
-yum
-
-pacman
-
+<ol>
+<li>apt</li>
+<li>yum</li>
+<li>pacman</li>
+</ol>
 
 -Nick
