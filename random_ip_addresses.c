@@ -5,9 +5,9 @@
  *	Showing %d IPv4 addresses
  *
  * Usage (assuming program compiled with "-o ip"):
- * 	./ip				// 1 random address
- * 	./ip 100			// 100 random addresses
- * 	./ip 1000 > file.txt 		// 1000 addresses to file.txt
+ * 	./ip					// 1 random address
+ * 	./ip 100				// 100 random addresses
+ * 	./ip 1000 > file.txt 	// 1000 addresses to file.txt
  */
 
 #include <stdio.h>
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 
 void outputAddresses(int q)
 {
-	int first_octet;
+	int first_octet, last_octet;
 	int i;
 
 	// new, pseudo-random seed
@@ -59,6 +59,7 @@ void outputAddresses(int q)
 	for(i = 1; i <= q; i++)
 	{
 		first_octet = rand() % 256;
+		last_octet = rand() % 256;
 
 		if(first_octet == 127 || first_octet == 10)
 		{
@@ -69,10 +70,15 @@ void outputAddresses(int q)
 			first_octet++;
 		}
 
+		if(last_octet == 0)
+		{
+			last_octet++;
+		}
+
 		printf(
 			"%d.%d.%d.%d\n",
 			first_octet, rand() % 256,
-			rand() % 256, rand() % 256
+			rand() % 256, last_octet
 		);
 	}
 }
