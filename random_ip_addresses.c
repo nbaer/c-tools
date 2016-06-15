@@ -5,9 +5,9 @@
  *	Showing %d IPv4 addresses
  *
  * Usage (assuming program compiled with "-o ip"):
- * 	./ip					// 1 random address
- * 	./ip 100				// 100 random addresses
- * 	./ip 1000 > file.txt 	// 1000 addresses to file.txt
+ * 	./ip				// 1 random address
+ * 	./ip 100			// 100 random addresses
+ * 	./ip 1000 > file.txt 		// 1000 addresses to file.txt
  */
 
 #include <stdio.h>
