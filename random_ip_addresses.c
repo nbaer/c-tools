@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
 		}
 	}
 
-
 	if(quantity > 0)
 	{
 		printf("Showing %d IPv4 addresses\n", quantity);
